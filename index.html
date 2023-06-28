@@ -31,15 +31,15 @@
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the array.
     // 🧠 As you have done in the past, declare a variable before you start looping, to accumulate the result.
     function sumNumsFor(nums) {
-let sum = 0;
-let length = nums.length;
-if(length === 0)
-return 0;
-for (let i = 0; i < length; i++){
-  if(nums[i] === 13) return "I'm too superstitious!";
-if (typeof nums[i] === 'number') sum += nums[i]
-  }
-return sum
+      let sum = 0;
+      let length = nums.length;
+      if (length === 0)
+        return 0;
+      for (let i = 0; i < length; i++) {
+        if (nums[i] === 13) return "I'm too superstitious!";
+        if (typeof nums[i] === 'number') sum += nums[i]
+      }
+      return sum
     }
 
     // 👉 CHALLENGE 2
@@ -48,19 +48,45 @@ return sum
     // stripVowels('Lady Gaga') // should return 'Ldy Gg'
     // ❗ Notes:
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the characters of the string.
-    function stripVowels(str) {
 
+    function stripVowels(str) {
+      let str1 = ''
+let vowl = ['a', 'e', 'i', 'o', 'u']
+let string = str.split('');
+for (let i = 0; i < str.length; i++){
+let char1 = str[i]
+if (!vowl.includes(char1)){
+  str1 += char1
+}
+}
+return str1
     }
+
 
     // 👉 CHALLENGE 3
     // 🧠 Reimplement sumNumsFor using a while loop instead of a for loop.
     // 🧠 Examples of usage:
     // sumNumsWhile([1, 2, 3]) // should return 6
     // sumNumsWhile([1, 2, 13]) // should return "I'm too superstitious!"
-    function sumNumsWhile() {
 
+    function sumNumsWhile(nums) {
+      let sum = 0;
+      let i = 0;
+      while (i < nums.length) {
+        if (nums[i] === 13) {
+          return "I'm too superstitious!";
+        } else if (typeof nums[i] !== 'number') {
+          i++
+          continue ;
+          sum += nums[i]
+        }else {
+          sum += nums[i]
+        }
+        i++
+      }
+      return sum
     }
-
+    
     // 👉 CHALLENGE 4
     // 🧠 The function fightMonsters takes an integer (lifePoints) as its argument, and returns a string.
     // 🧠 Inside the function there will be several rounds of monster-fighting.
