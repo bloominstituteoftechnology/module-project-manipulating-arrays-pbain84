@@ -51,15 +51,15 @@
 
     function stripVowels(str) {
       let str1 = ''
-let vowl = ['a', 'e', 'i', 'o', 'u']
-let string = str.split('');
-for (let i = 0; i < str.length; i++){
-let char1 = str[i]
-if (!vowl.includes(char1)){
-  str1 += char1
-}
-}
-return str1
+      let vowl = ['a', 'e', 'i', 'o', 'u']
+      let string = str.split('');
+      for (let i = 0; i < str.length; i++) {
+        let char1 = str[i]
+        if (!vowl.includes(char1)) {
+          str1 += char1
+        }
+      }
+      return str1
     }
 
 
@@ -77,16 +77,16 @@ return str1
           return "I'm too superstitious!";
         } else if (typeof nums[i] !== 'number') {
           i++
-          continue ;
+          continue;
           sum += nums[i]
-        }else {
+        } else {
           sum += nums[i]
         }
         i++
       }
       return sum
     }
-    
+
     // 👉 CHALLENGE 4
     // 🧠 The function fightMonsters takes an integer (lifePoints) as its argument, and returns a string.
     // 🧠 Inside the function there will be several rounds of monster-fighting.
@@ -104,10 +104,15 @@ return str1
     // 🧠 There are many ways to solve this, but practice using a while loop.
     // 🧠 Work out using pen and paper how the round number and the lifePoints change after each round.
     // 🧠 As long as there are lifePoints, decrease lifePoints by round number, and increase round number by one.
-    function fightMonsters() {
-
+    function fightMonsters(lifePoints) {
+      let round1 = 1;
+      let i = 0;
+      while (lifePoints < 0) {
+        lifePoints <= 0
+        round1++
+      }
+      return "You died in round 1"
     }
-
     // 👉 CHALLENGE 5
     // 🧠 The function findEvenNums takes an array of integers as its argument.
     // 🧠 It returns a new array containing the even numbers found in the original array, in the same order.
@@ -115,9 +120,18 @@ return str1
     // findEvenNums([0, 1, 2, 3, 4]) // should return [0, 2, 4]
     // ❗ Notes:
     // 🧠 Use any kind of loop you'd like and the push method to populate the array of even numbers.
-    function findEvenNums() {
-
-    }
+    function findEvenNums(integers) {
+      const evenNumbers = 2
+      for (let i = 0; i < integers.length; i++) {
+        if (integers[i] % evenNumbers === 0) {
+          return [integers[i]]
+        }
+        const integer = integers[i]
+        const even = integer.push
+        console.log(even)
+      }
+      }
+    
 
     // 👉 CHALLENGE 6
     // 🧠 The function separateAges takes an array of integers (ages) as its argument.
