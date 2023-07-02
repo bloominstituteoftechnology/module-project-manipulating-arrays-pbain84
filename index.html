@@ -30,6 +30,7 @@
     // ❗ Notes:
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the array.
     // 🧠 As you have done in the past, declare a variable before you start looping, to accumulate the result.
+
     function sumNumsFor(nums) {
       let sum = 0;
       let length = nums.length;
@@ -104,6 +105,7 @@
     // 🧠 There are many ways to solve this, but practice using a while loop.
     // 🧠 Work out using pen and paper how the round number and the lifePoints change after each round.
     // 🧠 As long as there are lifePoints, decrease lifePoints by round number, and increase round number by one.
+
     function fightMonsters(lifePoints) {
       let round1 = 1;
       let i = 0;
@@ -113,6 +115,7 @@
       }
       return "You died in round 1"
     }
+
     // 👉 CHALLENGE 5
     // 🧠 The function findEvenNums takes an array of integers as its argument.
     // 🧠 It returns a new array containing the even numbers found in the original array, in the same order.
@@ -120,18 +123,15 @@
     // findEvenNums([0, 1, 2, 3, 4]) // should return [0, 2, 4]
     // ❗ Notes:
     // 🧠 Use any kind of loop you'd like and the push method to populate the array of even numbers.
+
     function findEvenNums(integers) {
-      const evenNumbers = 2
+      let even = [];
       for (let i = 0; i < integers.length; i++) {
-        if (integers[i] % evenNumbers === 0) {
-          return [integers[i]]
+        if (integers[i] % 2 === 0) {
+          even.push(integers[i])
         }
-        const integer = integers[i]
-        const even = integer.push
-        console.log(even)
-      }
-      }
-    
+      } return even
+    }
 
     // 👉 CHALLENGE 6
     // 🧠 The function separateAges takes an array of integers (ages) as its argument.
@@ -140,8 +140,17 @@
     // 🧠 Ages in the subarrays should appear in the same order they appeared in the original array.
     // 🧠 Examples of usage:
     // separateAges([31, 12, 25, 65, 84, 20]) // should return [[12, 20], [31, 25, 65, 84]]
-    function separateAges() {
 
+    function separateAges(ages) {
+      let under21 = []
+      let over21 = []
+      for (let i = 0; i < ages.length; i++) {
+        if (ages[i] < 21) {
+          over21.push(ages[i])
+        } else if (ages[i] >= 21) {
+          under21.push(ages[i])
+        }
+      } return [over21, under21]
     }
 
     // 👉 CHALLENGE 7
@@ -151,9 +160,11 @@
     // 🧠 The "tail" prop contains an array holding the elements of the array after the first one.
     // 🧠 Examples of usage:
     // headAndTail([1, 2, 3]) // should return { head: 1, tail: [2, 3] }
-    function headAndTail() {
-
-    }
+    function headAndTail(array) {
+      const head = array
+      const tail = array.slice(0)
+ }
+    
 
     // 👉 CHALLENGE 8
     // 🧠 The function nestedLoops takes an array of strings as its argument.
@@ -162,7 +173,7 @@
     // nestedLoops(['hello', 'goodbye']) // should return ['hEllO', 'gOOdbyE']
     // ❗ Notes:
     // 🧠 To capitalize a string you can use its toUpperCase method: "a".toUpperCase() returns "A"
-    function nestedLoops() {
+    function nestedLoops(strings) {
 
     }
 
